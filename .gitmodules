@@ -1,3 +1,0 @@
-[submodule "c-fft"]
-	path = c-fft
-	url = https://github.com/lewhfree/c-fft
