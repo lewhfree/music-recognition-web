@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>libretune web</title>
+</head>
+<body>
+    <p>test</p>
+    <script>
+      async function loadWasm() {
+        try {
+          const response = await fetch("./libkissfft-float.wasm");
+          const bytes = await response.arrayBuffer();
+          const { instance } = await WebAssembly.instantiate(bytes, {});
+
+          instance.exports._initialize?.();
+          console.log(Object.keys(instance.exports));
+          window.wasm = instance.exports;
+        } catch (err) {
+          console.error(err);
+        }
+      }
+      loadWasm();
+    </script>
+</body>
+</html>
