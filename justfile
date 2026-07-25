@@ -1,4 +1,4 @@
-all: deps
+all:
     make TARGET=wasm32-wasi KISSFFT_STATIC=1 -Cc-fft/ -s
     zig cc -target wasm32-wasi \
     -Wl,--no-entry \
@@ -11,9 +11,7 @@ all: deps
 
 deps:
     rm -rf c-fft
-    cp -r ../c-fft .
-    # git clone https://github.com/lewhfree/c-fft
-    just clean
+    git clone https://github.com/lewhfree/c-fft
 
 clean:
     make -Cc-fft/ clean
