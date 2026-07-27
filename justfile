@@ -7,6 +7,8 @@ all:
     c-fft/libkissfft-float.a \
     -Wl,--no-whole-archive \
     -Wl,--export-dynamic \
+    -Wl,--export=malloc \
+    -Wl,--export=free \
     -o libkissfft-float.wasm
 
 deps:
