@@ -13,8 +13,8 @@ all:
 
 deps:
     rm -rf c-fft
-    # git clone https://github.com/lewhfree/c-fft
-    cp -r ../c-fft .
+    git clone https://github.com/lewhfree/c-fft
+    #cp -r ../c-fft .
     rm -rf ./c-fft/.git/
 
 clean:
