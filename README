@@ -1,0 +1,13 @@
+Music Recognition Web Client
+============================
+This project is a frontend for lewhfree/music-recognition-client-portable. It compiles the library to wasm, loads it, and then communicates with the server (lewhfree/music-recognition-backend).
+
+Dependencies
+============================
+just
+git
+zig
+
+Build
+============================
+Run 'just deps && just' to build the library. Then open/host index.html however you want.
